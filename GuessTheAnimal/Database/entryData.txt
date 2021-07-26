@@ -1,0 +1,1 @@
+Question "Is it warm-blooded?" (Question "Does it fly?" (String "bird") (String "dog")) (Question "Does it have 4 legs?" (String "lizard") (String "snake"))
