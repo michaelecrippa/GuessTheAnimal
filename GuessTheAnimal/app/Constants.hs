@@ -1,2 +1,2 @@
 module Constants where
-    dataBasePath = "./Database/entryData.txt"
+    databasePath = "./Database/entryData.txt"
