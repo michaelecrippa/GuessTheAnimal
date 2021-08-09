@@ -1,1 +1,1 @@
-Question "Is it warm-blooded?" (Question "Does it fly?" (String "bird") (String "dog")) (Question "Does it have 4 legs?" (String "lizard") (String "snake"))
+Node "Is it warm-blooded?" (Node "Does it fly?" (Node "Does it have furr?" (Leaf "Bat") (Leaf "bird")) (Leaf "dog")) (Node "Does it have 4 legs?" (Leaf "lizard") (Leaf "snake"))

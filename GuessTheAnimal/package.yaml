@@ -16,12 +16,12 @@ dependencies:
 - base >= 4.7 && < 5
 
 library:
-  source-dirs: src
+  source-dirs: Src
 
 executables:
   GuessTheAnimal-exe:
     main: Main.hs
-    source-dirs: app
+    source-dirs: App
     ghc-options:
     - -threaded
     - -rtsopts
@@ -39,3 +39,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - GuessTheAnimal
+    - HUnit
