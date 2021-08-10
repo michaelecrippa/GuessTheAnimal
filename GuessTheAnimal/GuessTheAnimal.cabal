@@ -28,6 +28,7 @@ library
       Constants
       DataTypes
       GuessTheAnimal
+      Helpers
       IOService
   other-modules:
       Paths_GuessTheAnimal

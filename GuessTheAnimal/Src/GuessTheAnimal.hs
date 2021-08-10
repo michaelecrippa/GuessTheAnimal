@@ -6,31 +6,34 @@ module GuessTheAnimal( startGame ) where
     startGame = do 
         IOService.start
         entry <- IOService.fetchEntryData 
-        gameOn (read entry) -- parse tree, catch errors
+        gameOn (read entry)
         return ()
 
     gameOn :: DataTypes.Tree -> IO DataTypes.Tree
     gameOn entry = do 
         IOService.newGame 
-        gameInfo <- play entry -- play
+        gameInfo <- play entry
         IOService.saveGameData gameInfo
         restart <- IOService.askForRestart 
-        if restart == "Yes"
+        if restart == Constants.yes
             then play gameInfo
             else do IOService.endGame 
                     return gameInfo
     
     play :: DataTypes.Tree -> IO DataTypes.Tree
     play node@(DataTypes.Node h l r) = do res <- IOService.requestAnswer h
-                                          if res == "Yes"
+                                          if res == Constants.yes
                                              then do y <- play l
                                                      return (DataTypes.Node h y r)
                                              else do n <- play r
                                                      return (DataTypes.Node h l n)
 
     play leaf@(DataTypes.Leaf _) = do res <- IOService.talk (IOService.print leaf)
-                                      if res == "Yes" 
+                                      if res == Constants.yes 
                                          then do IOService.animalGuessed 
                                                  return leaf
                                          else do IOService.animalCannotBeGuessed
                                                  IOService.askForAnimal leaf
+                                 
+
+        
