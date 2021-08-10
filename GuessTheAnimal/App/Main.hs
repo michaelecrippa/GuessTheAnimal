@@ -1,5 +1,5 @@
 module Main where 
-  import GuessTheAnimal( startGame )
+  import GuessTheAnimal ( startGame )
   main :: IO ()
   main = startGame
 

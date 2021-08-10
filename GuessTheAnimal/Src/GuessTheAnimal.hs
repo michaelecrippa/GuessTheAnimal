@@ -1,7 +1,9 @@
-module GuessTheAnimal( startGame ) where 
+module GuessTheAnimal ( startGame ) where 
     import IOService
     import Constants
+    import Helpers ( print )
     import DataTypes (Tree (Leaf, Node))
+
     startGame :: IO ()
     startGame = do 
         IOService.start
@@ -28,7 +30,7 @@ module GuessTheAnimal( startGame ) where
                                              else do n <- play r
                                                      return (DataTypes.Node h l n)
 
-    play leaf@(DataTypes.Leaf _) = do res <- IOService.talk (IOService.print leaf)
+    play leaf@(DataTypes.Leaf _) = do res <- IOService.talk (Helpers.print leaf)
                                       if res == Constants.yes 
                                          then do IOService.animalGuessed 
                                                  return leaf

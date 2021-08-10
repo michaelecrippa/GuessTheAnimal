@@ -1,1 +1,1 @@
-Node "Is it warm-blooded?" (Node "Does it fly?" (Node "Does it have furr?" (Leaf "Bat") (Leaf "bird")) (Leaf "dog")) (Node "Does it have 4 legs?" (Leaf "lizard") (Leaf "snake"))
+Node "Is it warm-blooded?" (Leaf "Bat") (Leaf "Snake")
