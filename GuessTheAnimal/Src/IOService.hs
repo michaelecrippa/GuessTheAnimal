@@ -1,5 +1,5 @@
 module IOService where
-    import Helpers ( in', print)
+    import Helpers ( in' )
     import System.IO ()
     import Constants ( databasePath, expectedAnswers, restartMessage, positive, startMessage, newGameMessage, endGameMessage, animalGuessedMessage, animalCannotBeGuessed, askForAnimal, guessAnimal, askForQuestion1, askForQuestion2 )
     import DataTypes ( Tree(Leaf , Node) )
@@ -55,6 +55,10 @@ module IOService where
     askForAnimal animal = do putStrLn Constants.askForAnimal 
                              animalName <- getLine 
                              let newLeaf = DataTypes.Leaf animalName
-                             putStrLn (Constants.askForQuestion1  ++ animalName ++ Constants.askForQuestion2 ++ Helpers.print animal)
+                             putStrLn (Constants.askForQuestion1 ++ animalName ++ Constants.askForQuestion2 ++ IOService.print animal)
                              question <- getLine 
                              return (DataTypes.Node question newLeaf animal)
+
+    print :: DataTypes.Tree -> String
+    print (DataTypes.Leaf animal) = animal
+    print (DataTypes.Node n _ _) = n 

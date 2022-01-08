@@ -5,8 +5,8 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           GuessTheAnimal
-version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/michaelecrippa/GuessTheAnimal/blob/master/README.md>
+version:        0.2.0.0
+description:    Please see the README on GitHub at <https://github.com/michaelecrippa/GuessTheAnimal>
 homepage:       https://github.com/michaelecrippa/GuessTheAnimal#readme
 bug-reports:    https://github.com/michaelecrippa/GuessTheAnimal/issues
 author:         Michael Crippa
@@ -14,9 +14,6 @@ maintainer:     michaelecrippa@gmail.com
 copyright:      2021 Michael Crippa
 license:        MIT
 build-type:     Simple
-extra-source-files:
-    README.md
-    ChangeLog.md
 
 source-repository head
   type: git
@@ -25,8 +22,8 @@ source-repository head
 library
   exposed-modules:
       Constants
+      Core
       DataTypes
-      GuessTheAnimal
       Helpers
       IOService
   other-modules:
@@ -45,7 +42,7 @@ executable GuessTheAnimal-exe
       App
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      GuessTheAnimal
+      Core
     , base >=4.7 && <5
   default-language: Haskell2010
 
@@ -55,10 +52,10 @@ test-suite GuessTheAnimal-test
   other-modules:
       Paths_GuessTheAnimal
   hs-source-dirs:
-      test
+      Tests
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      GuessTheAnimal
+      Core
     , HUnit
     , base >=4.7 && <5
   default-language: Haskell2010

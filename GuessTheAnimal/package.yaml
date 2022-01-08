@@ -1,16 +1,12 @@
 name: GuessTheAnimal
-version: 0.1.0.0
+version: 0.2.0.0
 github: "michaelecrippa/GuessTheAnimal"
 license: MIT
 author: "Michael Crippa"
 maintainer: "michaelecrippa@gmail.com"
 copyright: "2021 Michael Crippa"
 
-extra-source-files:
-- README.md
-- ChangeLog.md
-
-description: Please see the README on GitHub at <https://github.com/githubuser/GuessTheAnimal#readme>
+description: Please see the README on GitHub at <https://github.com/michaelecrippa/GuessTheAnimal>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -27,16 +23,16 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - GuessTheAnimal
+    - Core
 
 tests:
   GuessTheAnimal-test:
     main: Spec.hs
-    source-dirs: test
+    source-dirs: Tests
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - GuessTheAnimal
+    - Core
     - HUnit

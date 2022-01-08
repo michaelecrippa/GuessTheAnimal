@@ -4,7 +4,7 @@ module Constants where
     yes = "Yes"
     expectedAnswers = " Yes/No"
     restartMessage = "Do you want to play again? " ++ expectedAnswers
-    startMessage = "Guess the animal starting...\nPlease awnser with Yes or No to the questions asked and most importantly have fun :)\n"
+    startMessage = "Guess the animal starting...\nPlease answer with Yes or No to the questions and most importantly have fun :)\n"
     newGameMessage = "Think of an animal and we will guess it, or maybe not!? :)"
     endGameMessage = "Thank you for playing, see you soon! :)"
     animalGuessedMessage = "I guessed it WOHOOOOOOO, that was fun!"
