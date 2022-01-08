@@ -6,14 +6,13 @@ cabal-version: 1.12
 
 name:           GuessTheAnimal
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/GuessTheAnimal#readme>
+description:    Please see the README on GitHub at <https://github.com/michaelecrippa/GuessTheAnimal/blob/master/README.md>
 homepage:       https://github.com/michaelecrippa/GuessTheAnimal#readme
 bug-reports:    https://github.com/michaelecrippa/GuessTheAnimal/issues
 author:         Michael Crippa
 maintainer:     michaelecrippa@gmail.com
 copyright:      2021 Michael Crippa
 license:        MIT
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
