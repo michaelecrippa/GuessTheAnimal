@@ -2,8 +2,7 @@
 ## How to run the project ?
  - Fetch/Clone the project  
  - Install dependencies ( ghc, cabal, stack ) 
- - Choose one   
-   - Run `stack exec GuessTheAnimal-exe`  
+ - Run `stack exec GuessTheAnimal-exe`  
 ## How to test the project? 
  - Run `stack test`
 ## Refs  
