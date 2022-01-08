@@ -34,7 +34,5 @@ module Core ( startGame ) where
                                          then do IOService.animalGuessed 
                                                  return leaf
                                          else do IOService.animalCannotBeGuessed
-                                                 IOService.askForAnimal leaf
-                                 
-
+                                                 IOService.askForAnimal leaf                             
         
