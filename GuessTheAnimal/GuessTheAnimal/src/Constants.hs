@@ -1,6 +1,6 @@
 module Constants where
-    databasePath = "./Database/entryData.txt"
-    testDatabasePath = "./Database/testData.txt"
+    databasePath = "./GuessTheAnimal/database/data.txt"
+    testDatabasePath = "./database/testData.txt"
     yes = "Yes"
     expectedAnswers = " Yes/No"
     restartMessage = "Do you want to play again? " ++ expectedAnswers

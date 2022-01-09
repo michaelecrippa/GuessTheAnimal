@@ -6,33 +6,35 @@ author: "Michael Crippa"
 maintainer: "michaelecrippa@gmail.com"
 copyright: "2021 Michael Crippa"
 
+extra-source-files: []
+
 description: Please see the README on GitHub at <https://github.com/michaelecrippa/GuessTheAnimal>
 
 dependencies:
 - base >= 4.7 && < 5
+- HUnit
 
 library:
-  source-dirs: Src
+  source-dirs: src
 
 executables:
   GuessTheAnimal-exe:
     main: Main.hs
-    source-dirs: App
+    source-dirs: app
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - Core
+    - GuessTheAnimal
 
 tests:
   GuessTheAnimal-test:
     main: Spec.hs
-    source-dirs: Tests
+    source-dirs: tests
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - Core
-    - HUnit
+    - GuessTheAnimal

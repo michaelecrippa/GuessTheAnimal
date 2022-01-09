@@ -1,6 +1,17 @@
 module Core ( startGame ) where 
-    import IOService
-    import Constants
+    import IOService ( fetchEntryData,
+      askForRestart,
+      saveGameData,
+      start,
+      newGame,
+      endGame,
+      animalGuessed,
+      animalCannotBeGuessed,
+      requestAnswer,
+      talk,
+      askForAnimal,
+      print )
+    import Constants ( yes )
     import DataTypes (Tree (Leaf, Node))
 
     startGame :: IO ()

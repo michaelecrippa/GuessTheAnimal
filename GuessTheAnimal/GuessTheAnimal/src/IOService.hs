@@ -1,7 +1,20 @@
 module IOService where
     import Helpers ( in' )
-    import System.IO ()
-    import Constants ( databasePath, expectedAnswers, restartMessage, positive, startMessage, newGameMessage, endGameMessage, animalGuessedMessage, animalCannotBeGuessed, askForAnimal, guessAnimal, askForQuestion1, askForQuestion2 )
+    import System.IO ( readFile, writeFile )
+    import Constants ( 
+        databasePath, 
+        expectedAnswers, 
+        restartMessage, 
+        positive, 
+        startMessage, 
+        newGameMessage, 
+        endGameMessage, 
+        animalGuessedMessage, 
+        animalCannotBeGuessed, 
+        askForAnimal, 
+        guessAnimal, 
+        askForQuestion1, 
+        askForQuestion2 )
     import DataTypes ( Tree(Leaf , Node) )
     
     fetchEntryData :: IO String 
